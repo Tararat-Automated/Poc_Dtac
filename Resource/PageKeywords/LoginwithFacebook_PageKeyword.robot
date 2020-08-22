@@ -1,7 +1,9 @@
 *** Settings ***
 Library           AppiumLibrary
-Resource          ../../Resource/PageRepository/LoginwithFacebook_PageRepositoey.robot
+Resource          ../../Resource/PageRepository/Android/LoginwithFacebook_PageRepositoey.robot
 Resource          ../../Resource/PageLocaillized/LoginwithFacebook_PageLocailized.robot
+Resource          ../../Resource/PageKeywords/MyCommon.robot
+
 
 *** Variables ***
 ${REMOTE_URL}     http://localhost:4723/wd/hub      # URL to appium server
@@ -19,6 +21,23 @@ Open App
      # Open Application    ${REMOTE_URL}    platformName=${PLATFORM_NAME}    platformVersion=${PLATFORM_VERSION}
      #  ...    deviceName=${DEVICE_NAME}      app=${BUNDLE_ID}     #automationName=appium   
      Open Application    ${REMOTE_URL}    platformName=${PLATFORM_NAME}    platformVersion=${PLATFORM_VERSION}    deviceName=${DEVICE_NAME}    appPackage=${APP_PACKAGE}    appActivity=${APP_ACTIVITY}
+
+Click Signin with Feacbook
+    Wait Until Keyword Succeeds    30s    2s      Wait Until Page Contains Element     ${Loginfacebook}
+    Click Element     ${Loginfacebook}
+
+Click Choose a number to login 
+    Wait Until Keyword Succeeds    30s    2s      Wait Until Page Contains Element    ${ChooseNumber}
+    ${Number}=     Get Text     ${ChooseNumber}
+    Set Global Variable     ${Number}
+    Click Element     ${ChooseNumber}
+
+Verify Login Page
+     Mobile element text should be      ${ToolbarTitle}      ${txtToolbarTitle}
+     ${NumberProfile}=     Get Text     ${ProfilePhoneNumber}      
+     Set Global Variable    ${NumberProfile}
+     Should Be Number      ${Number}    ${NumberProfile}
+
 
 Close All Apps
      Close All Applications

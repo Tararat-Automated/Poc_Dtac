@@ -1,8 +1,11 @@
 *** Settings ***
 Library           AppiumLibrary
-Resource         ../DemoDtac/Android/Resource/PageKeywords/LoginwithFacebook_PageKeyword.robot
+Resource         ../Poc_Dtac/Resource/PageKeywords/LoginwithFacebook_PageKeyword.robot
 
 *** Test Cases ***
 test_demo
      Open App
+     Click Signin with Feacbook
+     Click Choose a number to login
+     Verify Login Page
      Close All Apps
