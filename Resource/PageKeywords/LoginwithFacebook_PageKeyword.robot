@@ -1,5 +1,6 @@
 *** Settings ***
 Library           AppiumLibrary
+Library           String
 Resource          ../../Resource/PageRepository/Android/LoginwithFacebook_PageRepositoey.robot
 Resource          ../../Resource/PageLocaillized/LoginwithFacebook_PageLocailized.robot
 Resource          ../../Resource/PageKeywords/MyCommon.robot
@@ -36,7 +37,7 @@ Verify Login Page
      Mobile element text should be      ${ToolbarTitle}      ${txtToolbarTitle}
      ${NumberProfile}=     Get Text     ${ProfilePhoneNumber}      
      Set Global Variable    ${NumberProfile}
-     Should Be Number      ${Number}    ${NumberProfile}
+      Should Be String      ${Number}    ${NumberProfile}
 
 
 Close All Apps
