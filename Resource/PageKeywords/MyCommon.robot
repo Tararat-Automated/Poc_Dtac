@@ -1,7 +1,6 @@
 *** Settings ***
 Library           AppiumLibrary
 Resource          ../../Resource/PageRepository/Android/LoginwithFacebook_PageRepositoey.robot
-Resource          ../../Resource/PageLocaillized/LoginwithFacebook_PageLocailized.robot
 
 
 *** Variables ***

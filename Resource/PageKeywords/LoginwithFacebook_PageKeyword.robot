@@ -16,12 +16,19 @@ ${APP_LOCATION}        /Users/tararatwongsansee/Library/Developer/Xcode/DerivedD
 ${BUNDLE_ID}         th.co.crie.dtacservices   #com.mock.HelloWorld
 ${APP_PACKAGE}    th.co.crie.tron2.android  
 ${APP_ACTIVITY}       th.co.dtac.function.SplashScreenActivity
+${PLATFORM}     ${ar_OS}
 
 *** Keywords ***
-Open App
-     # Open Application    ${REMOTE_URL}    platformName=${PLATFORM_NAME}    platformVersion=${PLATFORM_VERSION}
-     #  ...    deviceName=${DEVICE_NAME}      app=${BUNDLE_ID}     #automationName=appium   
+Open App 
+     Run Keyword If    "${PLATFORM}"=="Android"    Android Open app
+     ...    ELSE IF     "${PLATFORM}"=="iOS"   iOS Open App
+     
+Android Open app
      Open Application    ${REMOTE_URL}    platformName=${PLATFORM_NAME}    platformVersion=${PLATFORM_VERSION}    deviceName=${DEVICE_NAME}    appPackage=${APP_PACKAGE}    appActivity=${APP_ACTIVITY}
+
+iOS Open App     
+     Open Application    ${REMOTE_URL}    platformName=${PLATFORM_NAME}    platformVersion=${PLATFORM_VERSION}
+      ...    deviceName=${DEVICE_NAME}      app=${BUNDLE_ID}     #automationName=appium   
 
 Click Signin with Feacbook
     Wait Until Keyword Succeeds    30s    2s      Wait Until Page Contains Element     ${Loginfacebook}
@@ -41,4 +48,5 @@ Verify Login Page
 
 
 Close All Apps
+     Capture Page Screenshot
      Close All Applications
