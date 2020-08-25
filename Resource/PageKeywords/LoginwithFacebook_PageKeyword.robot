@@ -1,19 +1,20 @@
 *** Settings ***
 Library           AppiumLibrary
 Library           String
-Resource          ../../Resource/PageRepository/Android/LoginwithFacebook_PageRepositoey.robot
+Resource          ../../Resource/PageRepository/${ar_OS}/LoginwithFacebook_PageRepositoey.robot
+Resource          ../../Resource/PageRepository/${ar_OS}/LoginwithFacebook_PageRepositoey.yaml
 Resource          ../../Resource/PageLocaillized/LoginwithFacebook_PageLocailized.robot
 Resource          ../../Resource/PageKeywords/MyCommon.robot
 
 
 *** Variables ***
 ${REMOTE_URL}     http://localhost:4723/wd/hub      # URL to appium server
-${PLATFORM_NAME}    Android   #Android    #iOS
-${PLATFORM_VERSION}   8.0.0   #8.0.0   #12.4.8   #13.5
-${DEVICE_NAME}    Galaxy S7   #Galaxy S7  #iPhone 6_test
+${PLATFORM_NAME}    iOS   #Android    #iOS
+${PLATFORM_VERSION}   13.6   #8.0.0   #12.4.8   #13.5
+${DEVICE_NAME}    iPhone 11   #Galaxy S7  #iPhone 6_test
 #Appium uses the *.app directory that is created by the ios build to provision the emulator.
-${APP_LOCATION}        /Users/tararatwongsansee/Library/Developer/Xcode/DerivedData/HelloWorld-bbngffhwfyxyttaldcffavwhodbz/Build/Products/Debug-iphonesimulator/HelloWorld.app
-${BUNDLE_ID}         th.co.crie.dtacservices   #com.mock.HelloWorld
+${APP_LOCATION}        /Users/pearbum/Library/Developer/Xcode/DerivedData/dtac-iservice-dxzezdkyaqxnighaygfzafduqntd/Build/Products/Debug-iphonesimulator/dtac.app
+${BUNDLE_ID}         th.co.crie.dtacservices    #com.mock.HelloWorld
 ${APP_PACKAGE}    th.co.crie.tron2.android  
 ${APP_ACTIVITY}       th.co.dtac.function.SplashScreenActivity
 ${PLATFORM}     ${ar_OS}
@@ -28,11 +29,18 @@ Android Open app
 
 iOS Open App     
      Open Application    ${REMOTE_URL}    platformName=${PLATFORM_NAME}    platformVersion=${PLATFORM_VERSION}
-      ...    deviceName=${DEVICE_NAME}      app=${BUNDLE_ID}     #automationName=appium   
+      ...    deviceName=${DEVICE_NAME}      app=${APP_LOCATION}     bundleId=${BUNDLE_ID}
+     Notification ios    ${Don’t_Allow}
 
 Click Signin with Feacbook
     Wait Until Keyword Succeeds    30s    2s      Wait Until Page Contains Element     ${Loginfacebook}
     Click Element     ${Loginfacebook}
+
+Click Signin with Feacbook ios
+    Wait Until Keyword Succeeds    30s    2s      Wait Until Page Contains Element     ${Loginfacebook_ios}
+    Click Element     ${Loginfacebook_ios}
+    Notification use facebook    ${Continue}
+    Login facebook
 
 Click Choose a number to login 
     Wait Until Keyword Succeeds    30s    2s      Wait Until Page Contains Element    ${ChooseNumber}
@@ -46,6 +54,22 @@ Verify Login Page
      Set Global Variable    ${NumberProfile}
       Should Be String      ${Number}    ${NumberProfile}
 
+Notification ios
+     [Arguments]    ${noti}
+     Run Keyword If    "${noti}"=="Allow"    Click Text    ${Allow}
+     ...    ELSE IF    "${noti}"=="Don’t Allow"    Click Text    ${Don’t_Allow}
+
+Notification use facebook
+     [Arguments]    ${noti}
+     Run Keyword If    "${noti}"=="Cancel"    Click Text    ${Cancel}
+     ...    ELSE IF    "${noti}"=="Continue"    Click Text    ${Continue}
+
+Login facebook
+     # Input Text    ${fb_user}    pear.panaya@gmail.com
+     # Input Text    ${fb_password}    panaya176953
+     # Click Element     ${singIn_fb}
+     Wait Until Page Contains Element    ${connectedFB}
+     Click Element     ${connectedFB}
 
 Close All Apps
      Capture Page Screenshot
