@@ -2,7 +2,7 @@
 Library           AppiumLibrary
 Library           String
 Resource          ../PageRepository/Android/LoginwithFacebook_PageRepositoey.robot
-Resource          ../PageRepository/iOS/LoginwithFacebook_PageRepositoey.yaml
+Resource          ../PageRepository/iOS/LoginwithFacebook_PageRepositoey.robot
 Resource          ../PageLocaillized/LoginwithFacebook_PageLocailized.robot
 Resource          ../PageKeywords/MyCommon.robot
 
