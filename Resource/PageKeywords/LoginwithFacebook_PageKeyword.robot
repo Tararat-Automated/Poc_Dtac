@@ -10,10 +10,10 @@ Resource          ../../Resource/PageKeywords/MyCommon.robot
 *** Variables ***
 ${REMOTE_URL}     http://localhost:4723/wd/hub      # URL to appium server
 ${PLATFORM_NAME}    iOS   #Android    #iOS
-${PLATFORM_VERSION}   13.6   #8.0.0   #12.4.8   #13.5
+${PLATFORM_VERSION}   13.5   #8.0.0   #12.4.8   #13.5
 ${DEVICE_NAME}    iPhone 11   #Galaxy S7  #iPhone 6_test
 #Appium uses the *.app directory that is created by the ios build to provision the emulator.
-${APP_LOCATION}        /Users/pearbum/Library/Developer/Xcode/DerivedData/dtac-iservice-dxzezdkyaqxnighaygfzafduqntd/Build/Products/Debug-iphonesimulator/dtac.app
+${APP_LOCATION}        /Users/tararatwongsansee/Library/Developer/Xcode/DerivedData/dtac-iservice-efkfqtrdejacsqdowbfiipatkqsx/Build/Products/Debug-iphonesimulator/dtac.app
 ${BUNDLE_ID}         th.co.crie.dtacservices    #com.mock.HelloWorld
 ${APP_PACKAGE}    th.co.crie.tron2.android  
 ${APP_ACTIVITY}       th.co.dtac.function.SplashScreenActivity
@@ -37,8 +37,9 @@ Click Signin with Feacbook
     Click Element     ${Loginfacebook}
 
 Click Signin with Feacbook ios
-    Wait Until Keyword Succeeds    30s    2s      Wait Until Page Contains Element     ${Loginfacebook_ios}
-    Click Element     ${Loginfacebook_ios}
+    Wait Until Keyword Succeeds    30s    2s      Wait Until Page Contains Element     xpath=//XCUIElementTypeButton[@name="loginwithfacebook"]    #${Loginfacebook_ios}
+    Click Element     xpath=//XCUIElementTypeButton[@name="loginwithfacebook"]   #${Loginfacebook_ios}
+    Wait Until Keyword Succeeds    30s    2s      Wait Until Page Contains Element     xpath=//XCUIElementTypeButton[@name="Continue"]
     Notification use facebook    ${Continue}
     Login facebook
 
@@ -49,27 +50,28 @@ Click Choose a number to login
     Click Element     ${ChooseNumber}
 
 Verify Login Page
+     Wait Until Keyword Succeeds    40s    2s      Wait Until Page Contains Element    ${ToolbarTitle}   
      Mobile element text should be      ${ToolbarTitle}      ${txtToolbarTitle}
      ${NumberProfile}=     Get Text     ${ProfilePhoneNumber}      
      Set Global Variable    ${NumberProfile}
-      Should Be String      ${Number}    ${NumberProfile}
+     Should Be String      ${Number}    ${NumberProfile}
 
 Notification ios
      [Arguments]    ${noti}
      Run Keyword If    "${noti}"=="Allow"    Click Text    ${Allow}
-     ...    ELSE IF    "${noti}"=="Don’t Allow"    Click Text    ${Don’t_Allow}
+     ...    ELSE IF    "${noti}"=="Don’t Allow"    Click Element   xpath=//XCUIElementTypeButton[@name="Don’t Allow"]  #Click Text    ${Don’t_Allow}
 
 Notification use facebook
      [Arguments]    ${noti}
      Run Keyword If    "${noti}"=="Cancel"    Click Text    ${Cancel}
-     ...    ELSE IF    "${noti}"=="Continue"    Click Text    ${Continue}
+     ...    ELSE IF    "${noti}"=="Continue"    Click Element   xpath=//XCUIElementTypeButton[@name="Continue"]
 
 Login facebook
      # Input Text    ${fb_user}    pear.panaya@gmail.com
      # Input Text    ${fb_password}    panaya176953
      # Click Element     ${singIn_fb}
-     Wait Until Page Contains Element    ${connectedFB}
-     Click Element     ${connectedFB}
+     Wait Until Page Contains Element    xpath=//XCUIElementTypeButton[@name="ดำเนินการต่อ"]    #${connectedFB}
+     Click Element     xpath=//XCUIElementTypeButton[@name="ดำเนินการต่อ"]   #${connectedFB}
 
 Close All Apps
      Capture Page Screenshot

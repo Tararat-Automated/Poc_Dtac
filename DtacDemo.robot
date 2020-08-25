@@ -8,5 +8,5 @@ test_demo
      # Click Signin with Feacbook
      Click Signin with Feacbook ios
      Click Choose a number to login
-     # Verify Login Page
+     Verify Login Page
      Close All Apps

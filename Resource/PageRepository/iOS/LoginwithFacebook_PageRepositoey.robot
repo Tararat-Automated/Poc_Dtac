@@ -21,5 +21,5 @@ ${Youarenowconnectedwith}    android=UiSelector().text("You are now connected wi
 ${MydtacNumbers}    android=UiSelector().text("My dtac Numbers")
 ${AddPhoneNumber}    id=th.co.crie.tron2.android:id/add_phone_number
 ${Logoutfromthisaccount}    id=th.co.crie.tron2.android:id/facebook_login_button
-${ProfilePhoneNumber}   xpath=//android.widget.TextView[contains(@resource-id,'tvProfilePhoneNumber')]    #id=th.co.crie.tron2.android:id/tvProfilePhoneNumber
-${ToolbarTitle}    xpath=//android.widget.TextView[contains(@resource-id,'tvToolbarTitle')]    #id=th.co.crie.tron2.android:id/tvToolbarTitle
+${ProfilePhoneNumber}   xpath=//XCUIElementTypeStaticText[@name="099-239-5432"]    #id=th.co.crie.tron2.android:id/tvProfilePhoneNumber
+${ToolbarTitle}    xpath=//XCUIElementTypeStaticText[@name="Usage"][1]
