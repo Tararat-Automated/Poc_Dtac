@@ -1,19 +1,18 @@
 *** Settings ***
 Library           AppiumLibrary
 Library           String
-Resource          ../PageRepository/${ar_OS}/LoginwithFacebook_PageRepositoey.robot
-Resource          ../PageRepository/${ar_OS}/LoginwithFacebook_PageRepositoey.yaml
+Resource          ../PageRepository/Android/LoginwithFacebook_PageRepositoey.robot
+Resource          ../PageRepository/iOS/LoginwithFacebook_PageRepositoey.yaml
 Resource          ../PageLocaillized/LoginwithFacebook_PageLocailized.robot
 Resource          ../PageKeywords/MyCommon.robot
 
 
 *** Variables ***
 ${REMOTE_URL}     ${ar_Porturl}    # URL to appium server
-${PLATFORM_NAME}    ${ar_pfname}   #Android    #iOS
 ${PLATFORM_VERSION}   ${ar_pfversion}   #8.0.0   #12.4.8   #13.5
 ${DEVICE_NAME}    ${ar_devicename}    #emulator01   #Galaxy S7  #iPhone 6_test
 #Appium uses the *.app directory that is created by the ios build to provision the emulator.
-${APP_LOCATION}        /Users/tararatwongsansee/Library/Developer/Xcode/DerivedData/HelloWorld-bbngffhwfyxyttaldcffavwhodbz/Build/Products/Debug-iphonesimulator/HelloWorld.app
+${APP_LOCATION}        /Users/tararatwongsansee/Library/Developer/Xcode/DerivedData/dtac-iservice-efkfqtrdejacsqdowbfiipatkqsx/Build/Products/Debug-iphonesimulator/dtac.app
 ${BUNDLE_ID}         th.co.crie.dtacservices   #com.mock.HelloWorld
 ${APP_PACKAGE}    th.co.crie.tron2.android  
 ${APP_ACTIVITY}       th.co.dtac.function.SplashScreenActivity
