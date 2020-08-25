@@ -1,7 +1,8 @@
 *** Settings ***
 Library           AppiumLibrary
 Library           String
-Resource          ../PageRepository/Android/LoginwithFacebook_PageRepositoey.robot
+Resource          ../PageRepository/${ar_OS}/LoginwithFacebook_PageRepositoey.robot
+Resource          ../PageRepository/${ar_OS}/LoginwithFacebook_PageRepositoey.yaml
 Resource          ../PageLocaillized/LoginwithFacebook_PageLocailized.robot
 Resource          ../PageKeywords/MyCommon.robot
 
@@ -30,10 +31,21 @@ Android Open app
 iOS Open App     
      Open Application    ${ar_Porturl}    platformName=${ar_OS}    platformVersion=${ar_pfversion}
      ...    deviceName=${ar_devicename}      app=${APP_LOCATION}         
+     Notification ios    ${Don’t_Allow}
 
 Click Signin with Feacbook
-    Wait Until Keyword Succeeds    30s    2s      Wait Until Page Contains Element     ${Loginfacebook}
-    Click Element     ${Loginfacebook}
+     Run Keyword If    "${ar_OS}"=="Android"    Click Signin with Feacbook Android
+     ...    ELSE IF    "${ar_OS}"=="iOS"    Click Signin with Feacbook ios
+
+Click Signin with Feacbook ios
+    Wait Until Keyword Succeeds    30s    2s      Wait Until Page Contains Element     ${Loginfacebook_ios}
+    Click Element     ${Loginfacebook_ios}
+    Notification use facebook    ${Continue}
+    Login facebook
+
+Click Signin with Feacbook Android
+     Wait Until Keyword Succeeds    30s    2s      Wait Until Page Contains Element     ${Loginfacebook}
+     Click Element     ${Loginfacebook}
 
 Click Choose a number to login 
     Wait Until Keyword Succeeds    30s    2s      Wait Until Page Contains Element    ${ChooseNumber}
@@ -47,12 +59,33 @@ Verify Login Page
      Set Global Variable    ${NumberProfile}
      Should Be String      ${Number}    ${NumberProfile}
 
-Input Account Feacbook
+Notification ios
+     [Arguments]    ${noti}
+     Run Keyword If    "${noti}"=="Allow"    Click Text    ${Allow}
+     ...    ELSE IF    "${noti}"=="Don’t Allow"    Click Text    ${Don’t_Allow}
+
+Notification use facebook
+     [Arguments]    ${noti}
+     Run Keyword If    "${noti}"=="Cancel"    Click Text    ${Cancel}
+     ...    ELSE IF    "${noti}"=="Continue"    Click Text    ${Continue}
+
+Login facebook
+     Run Keyword If    "${ar_OS}"=="Android"    Input Account Feacbook android
+     ...    ELSE IF    "${ar_OS}"=="iOS"    Input Account Feacbook ios
+
+Input Account Feacbook ios
+     # Input Text    ${fb_user}    pear.panaya@gmail.com
+     # Input Text    ${fb_password}    panaya176953
+     # Click Element     ${singIn_fb}
+     Wait Until Page Contains Element    ${connectedFB}
+     Click Element     ${connectedFB}
+     Should Be String      ${Number}    ${NumberProfile}
+
+Input Account Feacbook android
      Wait Until Keyword Succeeds    30s    2s      Wait Until Page Contains Element     ${Loginemail}
      Input Text       ${Loginemail}     ${txtEmail} 
      Input Text       ${Loginpassword}    ${txtpassword}
      Click Element    ${SigninFB}
-     # Click Element    ${NotSave}
      Wait Until Keyword Succeeds    30s    2s      Wait Until Page Contains Element    ${Continue}
      Click Element    ${Continue}
 
