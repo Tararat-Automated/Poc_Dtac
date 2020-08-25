@@ -12,3 +12,8 @@ ${AddPhoneNumber}    id=th.co.crie.tron2.android:id/add_phone_number
 ${Logoutfromthisaccount}    id=th.co.crie.tron2.android:id/facebook_login_button
 ${ProfilePhoneNumber}   xpath=//android.widget.TextView[contains(@resource-id,'tvProfilePhoneNumber')]    #id=th.co.crie.tron2.android:id/tvProfilePhoneNumber
 ${ToolbarTitle}    xpath=//android.widget.TextView[contains(@resource-id,'tvToolbarTitle')]    #id=th.co.crie.tron2.android:id/tvToolbarTitle
+${Loginemail}    xpath=//android.widget.EditText[contains(@resource-id,'m_login_email')]  #id=m_login_email
+${Loginpassword}    xpath=//android.widget.EditText[contains(@resource-id,'m_login_password')]   #id=m_login_password
+${SigninFB}    xpath=//android.view.View[contains(@resource-id,'u_0_4')]
+${NotSave}    xpath=//android.widget.Button[contains(@resource-id,'autofill_save_no')]    
+${Continue}    android=UiSelector().text("ดำเนินการต่อ")    #xpath=//android.widget.Button[contains(@resource-id,'u_0_1')]

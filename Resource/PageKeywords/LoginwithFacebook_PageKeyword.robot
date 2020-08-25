@@ -19,6 +19,7 @@ ${APP_PACKAGE}    th.co.crie.tron2.android
 ${APP_ACTIVITY}       th.co.dtac.function.SplashScreenActivity
 ${PLATFORM}     ${ar_OS}
 
+
 *** Keywords ***
 Open App 
      Run Keyword If    "${PLATFORM}"=="Android"    Android Open app
@@ -33,14 +34,18 @@ iOS Open App
      Notification ios    ${Don’t_Allow}
 
 Click Signin with Feacbook
-    Wait Until Keyword Succeeds    30s    2s      Wait Until Page Contains Element     ${Loginfacebook}
-    Click Element     ${Loginfacebook}
+     Run Keyword If    "${ar_OS}"=="Android"    Click Signin with Feacbook Android
+     ...    ELSE IF    "${ar_OS}"=="iOS"    Click Signin with Feacbook ios
 
 Click Signin with Feacbook ios
     Wait Until Keyword Succeeds    30s    2s      Wait Until Page Contains Element     ${Loginfacebook_ios}
     Click Element     ${Loginfacebook_ios}
     Notification use facebook    ${Continue}
     Login facebook
+
+Click Signin with Feacbook Android
+     Wait Until Keyword Succeeds    30s    2s      Wait Until Page Contains Element     ${Loginfacebook}
+    Click Element     ${Loginfacebook}
 
 Click Choose a number to login 
     Wait Until Keyword Succeeds    30s    2s      Wait Until Page Contains Element    ${ChooseNumber}
@@ -52,7 +57,7 @@ Verify Login Page
      Mobile element text should be      ${ToolbarTitle}      ${txtToolbarTitle}
      ${NumberProfile}=     Get Text     ${ProfilePhoneNumber}      
      Set Global Variable    ${NumberProfile}
-      Should Be String      ${Number}    ${NumberProfile}
+     Should Be String      ${Number}    ${NumberProfile}
 
 Notification ios
      [Arguments]    ${noti}
@@ -70,6 +75,16 @@ Login facebook
      # Click Element     ${singIn_fb}
      Wait Until Page Contains Element    ${connectedFB}
      Click Element     ${connectedFB}
+     Should Be String      ${Number}    ${NumberProfile}
+
+Input Account Feacbook
+     Wait Until Keyword Succeeds    30s    2s      Wait Until Page Contains Element     ${Loginemail}
+     Input Text       ${Loginemail}     ${txtEmail} 
+     Input Text       ${Loginpassword}    ${txtpassword}
+     Click Element    ${SigninFB}
+     # Click Element    ${NotSave}
+     Wait Until Keyword Succeeds    30s    2s      Wait Until Page Contains Element    ${Continue}
+     Click Element    ${Continue}
 
 Close All Apps
      Capture Page Screenshot

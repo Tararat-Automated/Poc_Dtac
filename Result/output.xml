@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <robot generator="Robot 3.0.4 (Python 3.6.4 on darwin)" generated="20200825 02:07:20.476">
 <suite id="s1" name="DtacDemo" source="/Users/pearbum/Dtac/Poc_Dtac/DtacDemo.robot">
+=======
+<robot generated="20200825 10:44:56.690" generator="Robot 3.0.4 (Python 2.7.17 on darwin)">
+<suite source="/Users/tararatwongsansee/Poc_Dtac/DtacDemo.robot" id="s1" name="DtacDemo">
+>>>>>>> 9e8a5bdb7bb6d03f006f07ffec4397204ce19644
 <test id="s1-t1" name="test_demo">
 <kw name="Open App" library="LoginwithFacebook_PageKeyword">
 <kw name="Run Keyword If" library="BuiltIn">
@@ -23,6 +28,7 @@
 <arg>app=${APP_LOCATION}</arg>
 <arg>bundleId=${BUNDLE_ID}</arg>
 </arguments>
+<<<<<<< HEAD
 <status status="PASS" starttime="20200825 02:07:20.821" endtime="20200825 02:07:38.213"></status>
 </kw>
 <kw name="Notification ios" library="LoginwithFacebook_PageKeyword">
@@ -52,6 +58,15 @@
 <status status="PASS" starttime="20200825 02:07:38.214" endtime="20200825 02:07:38.890"></status>
 </kw>
 <status status="PASS" starttime="20200825 02:07:20.821" endtime="20200825 02:07:38.890"></status>
+=======
+<status status="PASS" endtime="20200825 10:45:10.103" starttime="20200825 10:44:56.976"></status>
+</kw>
+<status status="PASS" endtime="20200825 10:45:10.104" starttime="20200825 10:44:56.975"></status>
+</kw>
+<status status="PASS" endtime="20200825 10:45:10.104" starttime="20200825 10:44:56.974"></status>
+</kw>
+<status status="PASS" endtime="20200825 10:45:10.104" starttime="20200825 10:44:56.974"></status>
+>>>>>>> 9e8a5bdb7bb6d03f006f07ffec4397204ce19644
 </kw>
 <status status="PASS" starttime="20200825 02:07:20.820" endtime="20200825 02:07:38.890"></status>
 </kw>
@@ -71,17 +86,135 @@
 <arguments>
 <arg>${Loginfacebook_ios}</arg>
 </arguments>
+<<<<<<< HEAD
 <status status="PASS" starttime="20200825 02:07:38.894" endtime="20200825 02:07:39.536"></status>
 </kw>
 <status status="PASS" starttime="20200825 02:07:38.892" endtime="20200825 02:07:39.536"></status>
+=======
+<status status="PASS" endtime="20200825 10:45:12.438" starttime="20200825 10:45:10.107"></status>
+</kw>
+<status status="PASS" endtime="20200825 10:45:12.439" starttime="20200825 10:45:10.106"></status>
+>>>>>>> 9e8a5bdb7bb6d03f006f07ffec4397204ce19644
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${Loginfacebook_ios}</arg>
 </arguments>
+<<<<<<< HEAD
 <msg timestamp="20200825 02:07:39.536" level="INFO">Clicking element 'identifier=loginwithfacebook'.</msg>
 <status status="PASS" starttime="20200825 02:07:39.536" endtime="20200825 02:07:40.163"></status>
+=======
+<msg timestamp="20200825 10:45:12.440" level="INFO">Clicking element 'xpath=//android.widget.LinearLayout[contains(@resource-id,'btn_login_facebook')]'.</msg>
+<status status="PASS" endtime="20200825 10:45:13.249" starttime="20200825 10:45:12.439"></status>
+</kw>
+<status status="PASS" endtime="20200825 10:45:13.250" starttime="20200825 10:45:10.105"></status>
+</kw>
+<kw name="Input Account Feacbook" library="LoginwithFacebook_PageKeyword">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>30s</arg>
+<arg>2s</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${Loginemail}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${Loginemail}</arg>
+</arguments>
+<msg timestamp="20200825 10:45:18.711" level="INFO">&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
+&lt;hierarchy index="0" class="hierarchy" rotation="0" width="1080" height="2088"&gt;
+  &lt;android.widget.FrameLayout index="0" package="th.co.crie.tron2.android" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[28,917][1052,1237]" displayed="true"&gt;
+    &lt;android.widget.FrameLayout index="0" package="th.co.crie.tron2.android" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,961][1008,1193]" displayed="true"&gt;
+      &lt;android.widget.FrameLayout index="0" package="th.co.crie.tron2.android" class="android.widget.FrameLayout" text="" resource-id="android:id/content" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,961][1008,1193]" displayed="true"&gt;
+        &lt;android.widget.LinearLayout index="0" package="th.co.crie.tron2.android" class="android.widget.LinearLayout" text="" resource-id="android:id/parentPanel" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,961][1008,1193]" displayed="true"&gt;
+          &lt;android.widget.FrameLayout index="0" package="th.co.crie.tron2.android" class="android.widget.FrameLayout" text="" resource-id="android:id/customPanel" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,961][1008,1193]" displayed="true"&gt;
+            &lt;android.widget.FrameLayout index="0" package="th.co.crie.tron2.android" class="android.widget.FrameLayout" text="" resource-id="android:id/custom" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,961][1008,1193]" displayed="true"&gt;
+              &lt;android.widget.FrameLayout index="0" package="th.co.crie.tron2.android" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,961][1008,1193]" displayed="true"&gt;
+                &lt;android.widget.LinearLayout index="0" package="th.co.crie.tron2.android" class="android.widget.LinearLayout" text="" resource-id="android:id/body" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[72,961][1008,1193]" displayed="true"&gt;
+                  &lt;android.widget.ProgressBar index="0" package="th.co.crie.tron2.android" class="android.widget.ProgressBar" text="" resource-id="android:id/progress" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[138,1011][270,1143]" displayed="true" /&gt;
+                  &lt;android.widget.TextView index="1" package="th.co.crie.tron2.android" class="android.widget.TextView" text="Loading…" resource-id="android:id/message" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[336,1049][942,1105]" displayed="true" /&gt;
+                &lt;/android.widget.LinearLayout&gt;
+              &lt;/android.widget.FrameLayout&gt;
+            &lt;/android.widget.FrameLayout&gt;
+          &lt;/android.widget.FrameLayout&gt;
+        &lt;/android.widget.LinearLayout&gt;
+      &lt;/android.widget.FrameLayout&gt;
+    &lt;/android.widget.FrameLayout&gt;
+  &lt;/android.widget.FrameLayout&gt;
+&lt;/hierarchy&gt;</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20200825 10:45:19.909" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200825 10:45:19.909" starttime="20200825 10:45:18.712"></status>
+</kw>
+<msg timestamp="20200825 10:45:19.910" level="FAIL">Element 'xpath=//android.widget.EditText[contains(@resource-id,'m_login_email')]' did not appear in 5 seconds</msg>
+<status status="FAIL" endtime="20200825 10:45:19.910" starttime="20200825 10:45:13.252"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${Loginemail}</arg>
+</arguments>
+<status status="PASS" endtime="20200825 10:45:22.527" starttime="20200825 10:45:21.911"></status>
+</kw>
+<status status="PASS" endtime="20200825 10:45:22.527" starttime="20200825 10:45:13.251"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${Loginemail}</arg>
+<arg>${txtEmail}</arg>
+</arguments>
+<msg timestamp="20200825 10:45:22.528" level="INFO">Typing text 'yayo_ie@hotmail.com' into text field 'xpath=//android.widget.EditText[contains(@resource-id,'m_login_email')]'</msg>
+<status status="PASS" endtime="20200825 10:45:23.035" starttime="20200825 10:45:22.528"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${Loginpassword}</arg>
+<arg>${txtpassword}</arg>
+</arguments>
+<msg timestamp="20200825 10:45:23.036" level="INFO">Typing text 'tararat5615' into text field 'xpath=//android.widget.EditText[contains(@resource-id,'m_login_password')]'</msg>
+<status status="PASS" endtime="20200825 10:45:23.669" starttime="20200825 10:45:23.035"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${SigninFB}</arg>
+</arguments>
+<msg timestamp="20200825 10:45:23.670" level="INFO">Clicking element 'xpath=//android.view.View[contains(@resource-id,'u_0_4')]'.</msg>
+<status status="PASS" endtime="20200825 10:45:24.305" starttime="20200825 10:45:23.669"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>30s</arg>
+<arg>2s</arg>
+<arg>Wait Until Page Contains Element</arg>
+<arg>${Continue}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${Continue}</arg>
+</arguments>
+<status status="PASS" endtime="20200825 10:45:29.691" starttime="20200825 10:45:24.308"></status>
+</kw>
+<status status="PASS" endtime="20200825 10:45:29.691" starttime="20200825 10:45:24.307"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${Continue}</arg>
+</arguments>
+<msg timestamp="20200825 10:45:29.692" level="INFO">Clicking element 'android=UiSelector().text("ดำเนินการต่อ")'.</msg>
+<status status="PASS" endtime="20200825 10:45:33.800" starttime="20200825 10:45:29.691"></status>
+</kw>
+<status status="PASS" endtime="20200825 10:45:33.800" starttime="20200825 10:45:13.250"></status>
+>>>>>>> 9e8a5bdb7bb6d03f006f07ffec4397204ce19644
 </kw>
 <kw name="Notification use facebook" library="LoginwithFacebook_PageKeyword">
 <arguments>
@@ -98,12 +231,30 @@
 <arg>Click Text</arg>
 <arg>${Continue}</arg>
 </arguments>
+<<<<<<< HEAD
 <kw name="Click Text" library="AppiumLibrary">
 <doc>Click text identified by ``text``.</doc>
+=======
+<status status="PASS" endtime="20200825 10:45:33.918" starttime="20200825 10:45:33.802"></status>
+</kw>
+<status status="PASS" endtime="20200825 10:45:33.918" starttime="20200825 10:45:33.801"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+>>>>>>> 9e8a5bdb7bb6d03f006f07ffec4397204ce19644
 <arguments>
 <arg>${Continue}</arg>
 </arguments>
+<<<<<<< HEAD
 <status status="PASS" starttime="20200825 02:07:40.165" endtime="20200825 02:07:41.939"></status>
+=======
+<assign>
+<var>${Number}</var>
+</assign>
+<msg timestamp="20200825 10:45:34.040" level="INFO">Element 'xpath=//android.widget.TextView[contains(@resource-id,'sub_item_subnum')]' text is '099-239-5432' </msg>
+<msg timestamp="20200825 10:45:34.040" level="INFO">${Number} = 099-239-5432</msg>
+<status status="PASS" endtime="20200825 10:45:34.040" starttime="20200825 10:45:33.918"></status>
+>>>>>>> 9e8a5bdb7bb6d03f006f07ffec4397204ce19644
 </kw>
 <status status="PASS" starttime="20200825 02:07:40.164" endtime="20200825 02:07:41.939"></status>
 </kw>
@@ -115,17 +266,29 @@
 <arguments>
 <arg>${connectedFB}</arg>
 </arguments>
+<<<<<<< HEAD
 <status status="PASS" starttime="20200825 02:07:41.939" endtime="20200825 02:07:45.224"></status>
+=======
+<msg timestamp="20200825 10:45:34.041" level="INFO">${Number} = 099-239-5432</msg>
+<status status="PASS" endtime="20200825 10:45:34.041" starttime="20200825 10:45:34.041"></status>
+>>>>>>> 9e8a5bdb7bb6d03f006f07ffec4397204ce19644
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${connectedFB}</arg>
 </arguments>
+<<<<<<< HEAD
 <msg timestamp="20200825 02:07:45.225" level="INFO">Clicking element 'xpath=//XCUIElementTypeButton[@name="ดำเนินการต่อ"]'.</msg>
 <status status="PASS" starttime="20200825 02:07:45.224" endtime="20200825 02:07:46.637"></status>
 </kw>
 <status status="PASS" starttime="20200825 02:07:41.939" endtime="20200825 02:07:46.637"></status>
+=======
+<msg timestamp="20200825 10:45:34.042" level="INFO">Clicking element 'xpath=//android.widget.TextView[contains(@resource-id,'sub_item_subnum')]'.</msg>
+<status status="PASS" endtime="20200825 10:45:34.889" starttime="20200825 10:45:34.042"></status>
+</kw>
+<status status="PASS" endtime="20200825 10:45:34.889" starttime="20200825 10:45:33.801"></status>
+>>>>>>> 9e8a5bdb7bb6d03f006f07ffec4397204ce19644
 </kw>
 <status status="PASS" starttime="20200825 02:07:38.891" endtime="20200825 02:07:46.637"></status>
 </kw>
@@ -135,17 +298,87 @@
 <arguments>
 <arg>30s</arg>
 <arg>2s</arg>
+<<<<<<< HEAD
 <arg>Wait Until Page Contains Element</arg>
 <arg>${ChooseNumber}</arg>
 </arguments>
 <kw name="Wait Until Page Contains Element" library="AppiumLibrary">
 <doc>Waits until element specified with `locator` appears on current page.</doc>
+=======
+<arg>Page Should Contain Element</arg>
+<arg>${Element}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<msg timestamp="20200825 10:45:35.172" level="INFO">&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
+&lt;hierarchy index="0" class="hierarchy" rotation="0" width="1080" height="2088"&gt;
+  &lt;android.widget.FrameLayout index="0" package="th.co.crie.tron2.android" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[402,939][677,1214]" displayed="true"&gt;
+    &lt;android.widget.LinearLayout index="0" package="th.co.crie.tron2.android" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[402,939][677,1214]" displayed="true"&gt;
+      &lt;android.widget.FrameLayout index="0" package="th.co.crie.tron2.android" class="android.widget.FrameLayout" text="" resource-id="android:id/content" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[402,939][677,1214]" displayed="true"&gt;
+        &lt;android.widget.RelativeLayout index="0" package="th.co.crie.tron2.android" class="android.widget.RelativeLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[402,939][677,1214]" displayed="true"&gt;
+          &lt;android.widget.ImageView index="0" package="th.co.crie.tron2.android" class="android.widget.ImageView" text="" resource-id="th.co.crie.tron2.android:id/animation_view" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[402,939][677,1214]" displayed="true" /&gt;
+        &lt;/android.widget.RelativeLayout&gt;
+      &lt;/android.widget.FrameLayout&gt;
+    &lt;/android.widget.LinearLayout&gt;
+  &lt;/android.widget.FrameLayout&gt;
+&lt;/hierarchy&gt;</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20200825 10:45:36.629" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-2.png"&gt;&lt;img src="appium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200825 10:45:36.629" starttime="20200825 10:45:35.172"></status>
+</kw>
+<msg timestamp="20200825 10:45:36.630" level="FAIL">Page should have contained element 'xpath=//android.widget.TextView[contains(@resource-id,'tvToolbarTitle')]' but did not</msg>
+<status status="FAIL" endtime="20200825 10:45:36.630" starttime="20200825 10:45:34.892"></status>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<doc>Verifies that current page contains `locator` element.</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<msg timestamp="20200825 10:45:41.097" level="INFO">Current page contains element 'xpath=//android.widget.TextView[contains(@resource-id,'tvToolbarTitle')]'.</msg>
+<status status="PASS" endtime="20200825 10:45:41.097" starttime="20200825 10:45:38.631"></status>
+</kw>
+<status status="PASS" endtime="20200825 10:45:41.098" starttime="20200825 10:45:34.891"></status>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<arguments>
+<arg>${Element}</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20200825 10:45:41.996" level="INFO">Element 'xpath=//android.widget.TextView[contains(@resource-id,'tvToolbarTitle')]' text is 'Usage' </msg>
+<msg timestamp="20200825 10:45:41.996" level="INFO">${actual} = Usage</msg>
+<status status="PASS" endtime="20200825 10:45:41.996" starttime="20200825 10:45:41.098"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20200825 10:45:41.997" starttime="20200825 10:45:41.996"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+>>>>>>> 9e8a5bdb7bb6d03f006f07ffec4397204ce19644
 <arguments>
 <arg>${ChooseNumber}</arg>
 </arguments>
+<<<<<<< HEAD
 <status status="PASS" starttime="20200825 02:07:46.639" endtime="20200825 02:07:49.037"></status>
 </kw>
 <status status="PASS" starttime="20200825 02:07:46.638" endtime="20200825 02:07:49.037"></status>
+=======
+<msg timestamp="20200825 10:45:41.998" level="INFO">Expected 'Usage' and Actual 'Usage' result</msg>
+<status status="PASS" endtime="20200825 10:45:41.998" starttime="20200825 10:45:41.997"></status>
+</kw>
+<status status="PASS" endtime="20200825 10:45:41.998" starttime="20200825 10:45:34.890"></status>
+>>>>>>> 9e8a5bdb7bb6d03f006f07ffec4397204ce19644
 </kw>
 <kw name="Get Text" library="AppiumLibrary">
 <doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
@@ -155,31 +388,49 @@
 <assign>
 <var>${Number}</var>
 </assign>
+<<<<<<< HEAD
 <msg timestamp="20200825 02:07:49.597" level="INFO">Element 'xpath=//XCUIElementTypeCell[@name="099-239-5432"]' text is '099-239-5432' </msg>
 <msg timestamp="20200825 02:07:49.598" level="INFO">${Number} = 099-239-5432</msg>
 <status status="PASS" starttime="20200825 02:07:49.038" endtime="20200825 02:07:49.598"></status>
+=======
+<msg timestamp="20200825 10:45:43.487" level="INFO">Element 'xpath=//android.widget.TextView[contains(@resource-id,'tvProfilePhoneNumber')]' text is '099-239-5432' </msg>
+<msg timestamp="20200825 10:45:43.487" level="INFO">${NumberProfile} = 099-239-5432</msg>
+<status status="PASS" endtime="20200825 10:45:43.488" starttime="20200825 10:45:41.998"></status>
+>>>>>>> 9e8a5bdb7bb6d03f006f07ffec4397204ce19644
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <doc>Makes a variable available globally in all tests and suites.</doc>
 <arguments>
 <arg>${Number}</arg>
 </arguments>
+<<<<<<< HEAD
 <msg timestamp="20200825 02:07:49.598" level="INFO">${Number} = 099-239-5432</msg>
 <status status="PASS" starttime="20200825 02:07:49.598" endtime="20200825 02:07:49.598"></status>
+=======
+<msg timestamp="20200825 10:45:43.489" level="INFO">${NumberProfile} = 099-239-5432</msg>
+<status status="PASS" endtime="20200825 10:45:43.489" starttime="20200825 10:45:43.488"></status>
+>>>>>>> 9e8a5bdb7bb6d03f006f07ffec4397204ce19644
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>${ChooseNumber}</arg>
 </arguments>
+<<<<<<< HEAD
 <msg timestamp="20200825 02:07:49.598" level="INFO">Clicking element 'xpath=//XCUIElementTypeCell[@name="099-239-5432"]'.</msg>
 <status status="PASS" starttime="20200825 02:07:49.598" endtime="20200825 02:07:50.425"></status>
 </kw>
 <status status="PASS" starttime="20200825 02:07:46.638" endtime="20200825 02:07:50.425"></status>
+=======
+<status status="PASS" endtime="20200825 10:45:43.490" starttime="20200825 10:45:43.489"></status>
+</kw>
+<status status="PASS" endtime="20200825 10:45:43.490" starttime="20200825 10:45:34.890"></status>
+>>>>>>> 9e8a5bdb7bb6d03f006f07ffec4397204ce19644
 </kw>
 <kw name="Close All Apps" library="LoginwithFacebook_PageKeyword">
 <kw name="Capture Page Screenshot" library="AppiumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<<<<<<< HEAD
 <msg timestamp="20200825 02:07:50.578" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
 <status status="PASS" starttime="20200825 02:07:50.426" endtime="20200825 02:07:50.578"></status>
 </kw>
@@ -192,6 +443,20 @@
 <status status="PASS" starttime="20200825 02:07:20.819" endtime="20200825 02:07:51.631" critical="yes"></status>
 </test>
 <status status="PASS" starttime="20200825 02:07:20.478" endtime="20200825 02:07:51.632"></status>
+=======
+<msg timestamp="20200825 10:45:44.087" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-3.png"&gt;&lt;img src="appium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200825 10:45:44.087" starttime="20200825 10:45:43.491"></status>
+</kw>
+<kw name="Close All Applications" library="AppiumLibrary">
+<doc>Closes all open applications.</doc>
+<status status="PASS" endtime="20200825 10:45:45.373" starttime="20200825 10:45:44.087"></status>
+</kw>
+<status status="PASS" endtime="20200825 10:45:45.374" starttime="20200825 10:45:43.490"></status>
+</kw>
+<status status="PASS" endtime="20200825 10:45:45.374" critical="yes" starttime="20200825 10:44:56.973"></status>
+</test>
+<status status="PASS" endtime="20200825 10:45:45.375" starttime="20200825 10:44:56.693"></status>
+>>>>>>> 9e8a5bdb7bb6d03f006f07ffec4397204ce19644
 </suite>
 <statistics>
 <total>
