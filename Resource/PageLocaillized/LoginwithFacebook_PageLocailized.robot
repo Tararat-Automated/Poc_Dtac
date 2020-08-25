@@ -10,3 +10,7 @@ ${txtMydtacNumbers}    Choose a number to login
 ${btnAddPhoneNumber}     Add phone number
 ${txtLogoutfromthisaccount}    Logout from this account
 ${txtToolbarTitle}    Usage
+${txtSigninFB}    เข้าสู่ระบบ
+${txtEmail}      yayo_ie@hotmail.com
+${txtpassword}    tararat5615
+${txtcontinue}    ดำเนินการต่อ
