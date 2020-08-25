@@ -40,7 +40,7 @@ Click Signin with Feacbook
 Click Signin with Feacbook ios
     Wait Until Keyword Succeeds    30s    2s      Wait Until Page Contains Element     ${Loginfacebook_ios}
     Click Element     ${Loginfacebook_ios}
-    Notification use facebook    ${Continue}
+    Notification use facebook    ${txtContinue}
     Login facebook
 
 Click Signin with Feacbook Android
@@ -67,7 +67,7 @@ Notification ios
 Notification use facebook
      [Arguments]    ${noti}
      Run Keyword If    "${noti}"=="Cancel"    Click Text    ${Cancel}
-     ...    ELSE IF    "${noti}"=="Continue"    Click Text    ${Continue}
+     ...    ELSE IF    "${noti}"=="Continue"    Click Text    ${txtContinue}
 
 Login facebook
      # Input Text    ${fb_user}    pear.panaya@gmail.com
@@ -75,7 +75,7 @@ Login facebook
      # Click Element     ${singIn_fb}
      Wait Until Page Contains Element    ${connectedFB}
      Click Element     ${connectedFB}
-     Should Be String      ${Number}    ${NumberProfile}
+     # Should Be String      ${Number}    ${NumberProfile}
 
 Input Account Feacbook
      Wait Until Keyword Succeeds    30s    2s      Wait Until Page Contains Element     ${Loginemail}

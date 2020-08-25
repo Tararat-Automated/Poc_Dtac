@@ -13,7 +13,7 @@ ${txtToolbarTitle}    Usage
 ${Allow}    Allow
 ${Don’t_Allow}    Don’t Allow
 ${Cancel}    Cancel
-${Continue}    Continue
+${txtContinue}    Continue
 ${btssinnginFB}    เข้าสู่ระบบ
 ${txtWelcomeFB}    เข้าสู่ระบบบัญชี Facebook ของคุณเพื่อเชื่อมต่อกับ dtac
 ${btnconnectedFB}    ดำเนินการต่อ
