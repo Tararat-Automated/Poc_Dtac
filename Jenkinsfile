@@ -3,6 +3,8 @@ pipeline {
 
     environment {
         PATH = "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin"
+        ANDROID_HOME = "/Users/tararatwongsansee/Library/Android/sdk"
+        JAVA_HOME = "/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home"
     }
 
     stages {
