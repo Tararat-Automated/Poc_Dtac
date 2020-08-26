@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                parallel (
+                steps (
                     "iOS": {
                         sh'''
                         appium -p 8200 &
