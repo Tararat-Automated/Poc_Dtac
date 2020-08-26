@@ -11,7 +11,7 @@ pipeline {
         stage('TestiOS') {
             steps {
                 parallel (
-                    "iOS1": {
+                    "iOS": {
                         sh'''
                         appium -p 8200 &
                         sleep 5s
@@ -35,7 +35,7 @@ pipeline {
         stage ("TestAndroid"){
             steps {
                 parallel (
-                    "Android1": {
+                    "Android": {
                         sh'''
                         appium -p 8210 &
                         sleep 5s
