@@ -49,7 +49,7 @@ Click Signin with Feacbook
 Click Signin with Feacbook ios
     Wait Until Keyword Succeeds    30s    2s      Wait Until Page Contains Element     xpath=//XCUIElementTypeButton[@name="loginwithfacebook"]    #${Loginfacebook_ios}
     Click Element     xpath=//XCUIElementTypeButton[@name="loginwithfacebook"]   #${Loginfacebook_ios}
-    Wait Until Keyword Succeeds    30s    2s      Wait Until Page Contains Element     xpath=//XCUIElementTypeButton[@name="Continue"]
+    Wait Until Keyword Succeeds    40s    2s      Wait Until Page Contains Element     xpath=//XCUIElementTypeButton[@name="Continue"]
     Notification use facebook     Continue
 
 
