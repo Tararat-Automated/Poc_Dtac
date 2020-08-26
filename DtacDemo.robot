@@ -1,6 +1,6 @@
 *** Settings ***
 Library           AppiumLibrary
-Resource         ../Poc_Dtac/Resource/PageKeywords/LoginwithFacebook_PageKeyword.robot
+Resource          Resource/PageKeywords/LoginwithFacebook_PageKeyword.robot
 
 *** Test Cases ***
 test_demo
