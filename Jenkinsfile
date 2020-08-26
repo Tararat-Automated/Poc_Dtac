@@ -16,7 +16,7 @@ pipeline {
                         appium -p 8200 &
                         sleep 5s
                         echo 'Running test for iOS..'
-                        pybot -d Result/iOS2 -v ar_OS:iOS -v ar_Porturl:http://localhost:8200/wd/hub -v ar_pfversion:13.6 -v ar_devicename:iPhone 11 DtacDemo.robot
+                        pybot -d Result/iOS2 -v ar_OS:iOS -v ar_Porturl:http://localhost:8200/wd/hub -v ar_pfversion:13.6 -v ar_devicename:iPhone11 DtacDemo.robot
                         echo 'Finish testing iOS..'
                         '''
                     }

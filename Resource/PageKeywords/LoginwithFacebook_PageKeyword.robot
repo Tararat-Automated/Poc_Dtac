@@ -31,7 +31,7 @@ Android Open app
 
 iOS Open app
       Open Application    ${REMOTE_URL}    platformName=${ar_OS}    platformVersion=${ar_pfversion}
-      ...    deviceName=${ar_devicename}    app=${APP_LOCATION}
+      ...    deviceName=iPhone 11    app=${APP_LOCATION}
       Notification ios    ${Don’t_Allow}       
       sleep   2s
 
