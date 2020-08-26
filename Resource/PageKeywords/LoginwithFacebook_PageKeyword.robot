@@ -99,11 +99,11 @@ Notification use facebook
      ...    ELSE IF    "${noti}"=="Continue"    Click Element    xpath=//XCUIElementTypeButton[@name="Continue"]
 
 Input Account Facebook android
-     Wait Until Keyword Succeeds    30s    2s      Wait Until Page Contains Element     ${Loginemail}
+     Wait Until Keyword Succeeds    40s    2s      Wait Until Page Contains Element     ${Loginemail}
      Input Text       ${Loginemail}     ${txtEmail} 
      Input Text       ${Loginpassword}    ${txtpassword}
      Click Element    ${SigninFB}
-     Wait Until Keyword Succeeds    30s    2s      Wait Until Page Contains Element    ${Continue}
+     Wait Until Keyword Succeeds    40s    2s      Wait Until Page Contains Element    ${Continue}
      Click Element    ${Continue}
 
 Input Account Facebook iOS
