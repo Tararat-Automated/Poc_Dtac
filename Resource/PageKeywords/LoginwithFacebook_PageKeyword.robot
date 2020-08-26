@@ -86,6 +86,7 @@ Verify Login Page android
 Verify Login Page ios
      Wait Until Keyword Succeeds    40s    2s      Wait Until Page Contains Element    xpath=//XCUIElementTypeStaticText[@name="Usage"][1]  
      Mobile element text should be      xpath=//XCUIElementTypeStaticText[@name="Usage"][1]      ${txtToolbarTitle}
+     Wait Until Keyword Succeeds    40s    2s      Wait Until Page Contains Element       xpath=//XCUIElementTypeStaticText[@name="099-239-5432"]
      ${NumberProfile}=     Get Text     xpath=//XCUIElementTypeStaticText[@name="099-239-5432"]    
      Set Global Variable    ${NumberProfile}
      Should Be String      xpath=//XCUIElementTypeStaticText[@name="Usage"][1]    ${NumberProfile}
@@ -112,7 +113,7 @@ Input Account Facebook iOS
      # Input Text    ${fb_user}    pear.panaya@gmail.com
      # Input Text    ${fb_password}    panaya176953
      # Click Element     ${singIn_fb}
-     Wait Until Keyword Succeeds    40s    2s      Wait Until Page Contains Element     xpath=//XCUIElementTypeButton[@name="ดำเนินการต่อ"]
+     Wait Until Keyword Succeeds    50s    2s      Wait Until Page Contains Element     xpath=//XCUIElementTypeButton[@name="ดำเนินการต่อ"]
      Click Element     xpath=//XCUIElementTypeButton[@name="ดำเนินการต่อ"]   #${connectedFB}
 
 Close All Apps
