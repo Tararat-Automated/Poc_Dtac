@@ -3,13 +3,13 @@ Library           AppiumLibrary
 Library           String
 Library           yaml
 Resource          ../../Resource/PageRepository/Android/LoginwithFacebook_PageRepositoey.robot
-Resource          ../../Resource/PageRepository/iOS/LoginwithFacebook_PageRepositoey.yaml
+Resource          ../../Resource/PageRepository/iOS/LoginwithFacebook_PageRepositoey.robot
 Resource          ../../Resource/PageLocaillized/LoginwithFacebook_PageLocailized.robot
 Resource          ../../Resource/PageKeywords/MyCommon.robot
 
 
 *** Variables ***
-${REMOTE_URL}     http://localhost:4723/wd/hub      # URL to appium server
+${REMOTE_URL}     ${ar_Porturl}    #http://localhost:4723/wd/hub      # URL to appium server
 #${PLATFORM_NAME}   Android      #iOS
 ${PLATFORM_VERSION}   ${ar_pfversion}   #8.0.0   #12.4.8   #13.5
 ${DEVICE_NAME}    ${ar_devicename}    #Galaxy S7  #iPhone 6_test
