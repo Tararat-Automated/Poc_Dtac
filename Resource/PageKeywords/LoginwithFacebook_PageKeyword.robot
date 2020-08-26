@@ -110,7 +110,7 @@ Input Account Facebook iOS
      # Input Text    ${fb_user}    pear.panaya@gmail.com
      # Input Text    ${fb_password}    panaya176953
      # Click Element     ${singIn_fb}
-     Wait Until Page Contains Element    xpath=//XCUIElementTypeButton[@name="ดำเนินการต่อ"]    #${connectedFB}
+     Wait Until Keyword Succeeds    40s    2s      Wait Until Page Contains Element     xpath=//XCUIElementTypeButton[@name="ดำเนินการต่อ"]
      Click Element     xpath=//XCUIElementTypeButton[@name="ดำเนินการต่อ"]   #${connectedFB}
 
 Close All Apps
