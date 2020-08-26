@@ -59,7 +59,7 @@ Click Choose a number to login
 
 
 Click Choose a number to login android
-    Wait Until Keyword Succeeds    30s    2s      Wait Until Page Contains Element    ${ChooseNumber}
+    Wait Until Keyword Succeeds    40s    2s      Wait Until Page Contains Element    ${ChooseNumber}
     ${Number}=     Get Text     ${ChooseNumber}
     Set Global Variable     ${Number}
     Click Element     ${ChooseNumber}
