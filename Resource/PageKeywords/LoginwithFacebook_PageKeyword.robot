@@ -8,9 +8,9 @@ Resource          ../../Resource/PageKeywords/MyCommon.robot
 
 *** Variables ***
 ${REMOTE_URL}     http://localhost:4723/wd/hub      # URL to appium server
-${PLATFORM_NAME}    Android   #Android    #iOS
-${PLATFORM_VERSION}   8.0.0   #8.0.0   #12.4.8   #13.5
-${DEVICE_NAME}    Galaxy S7   #Galaxy S7  #iPhone 6_test
+#${PLATFORM_NAME}   Android      #iOS
+${PLATFORM_VERSION}   ${ar_pfversion}   #8.0.0   #12.4.8   #13.5
+${DEVICE_NAME}    ${ar_devicename}    #Galaxy S7  #iPhone 6_test
 #Appium uses the *.app directory that is created by the ios build to provision the emulator.
 ${APP_LOCATION}        /Users/tararatwongsansee/Library/Developer/Xcode/DerivedData/HelloWorld-bbngffhwfyxyttaldcffavwhodbz/Build/Products/Debug-iphonesimulator/HelloWorld.app
 ${BUNDLE_ID}         th.co.crie.dtacservices   #com.mock.HelloWorld
@@ -20,8 +20,9 @@ ${PLATFORM}     ${ar_OS}
 
 *** Keywords ***
 Open App 
-     Run Keyword If    "${PLATFORM}"=="Android"    Android Open app
-     ...    ELSE IF     "${PLATFORM}"=="iOS"   iOS Open App
+     Open Application    ${REMOTE_URL}    platformName=${ar_OS}    platformVersion=${ar_pfversion}    deviceName=${ar_devicename}    appPackage=${APP_PACKAGE}    appActivity=${APP_ACTIVITY}
+     # Run Keyword If    "${PLATFORM}"=="Android"    Android Open app
+     # ...    ELSE IF     "${PLATFORM}"=="iOS"   iOS Open App
      
 Android Open app
      Open Application    ${REMOTE_URL}    platformName=${PLATFORM_NAME}    platformVersion=${PLATFORM_VERSION}    deviceName=${DEVICE_NAME}    appPackage=${APP_PACKAGE}    appActivity=${APP_ACTIVITY}
@@ -46,6 +47,13 @@ Verify Login Page
      Set Global Variable    ${NumberProfile}
       Should Be String      ${Number}    ${NumberProfile}
 
+Input Account Feacbook android
+     Wait Until Keyword Succeeds    30s    2s      Wait Until Page Contains Element     ${Loginemail}
+     Input Text       ${Loginemail}     ${txtEmail} 
+     Input Text       ${Loginpassword}    ${txtpassword}
+     Click Element    ${SigninFB}
+     Wait Until Keyword Succeeds    30s    2s      Wait Until Page Contains Element    ${Continue}
+     Click Element    ${Continue}
 
 Close All Apps
      Capture Page Screenshot
