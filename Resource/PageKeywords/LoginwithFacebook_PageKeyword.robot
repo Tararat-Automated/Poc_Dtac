@@ -27,12 +27,12 @@ Open App
 
 Android Open app
      Open Application    ${REMOTE_URL}    platformName=${ar_OS}    platformVersion=${ar_pfversion}    deviceName=${ar_devicename}   appPackage=${APP_PACKAGE}    appActivity=${APP_ACTIVITY}
-
+     sleep   2s
 iOS Open app
       Open Application    ${REMOTE_URL}    platformName=${ar_OS}    platformVersion=13.6
       ...    deviceName=iPhone 11    app=${APP_LOCATION}
       Notification ios    ${Don’t_Allow}       
-
+      sleep   2s
 Signin with Facebook
      Run Keyword If   "${PLATFORM}"=="Android"      Click Signin with Feacbook 
      ...  ELSE IF    "${PLATFORM}"=="iOS"    Click Signin with Feacbook ios
