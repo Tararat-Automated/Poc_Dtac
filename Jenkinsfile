@@ -8,7 +8,7 @@ pipeline {
     }
 
     stages {
-        stage('Test') {
+        stage('TestiOS') {
             steps {
                 parallel (
                     "iOS": {
@@ -30,7 +30,10 @@ pipeline {
                     //     '''
                     // },
                 )
-
+            }
+        }
+        stage ("TestAndroid"){
+            steps {
                 parallel (
                     "Android": {
                         sh'''
