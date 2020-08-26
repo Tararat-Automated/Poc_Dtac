@@ -29,9 +29,9 @@ pipeline {
                     //     echo 'Finish testing iOS..'
                     //     '''
                     // },
-                // )
-        //     }
-        // }
+                )
+            }
+        }
         stage ("TestAndroid"){
             steps {
                 parallel (
