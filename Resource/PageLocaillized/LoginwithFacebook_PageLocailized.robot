@@ -13,3 +13,10 @@ ${txtToolbarTitle}    Usage
 ${txtEmail}      yayo_ie@hotmail.com
 ${txtpassword}    tararat5615
 ${txtcontinue}    ดำเนินการต่อ
+${Allow}    Allow
+${Don’t_Allow}    Don’t Allow
+${Cancel}    Cancel
+${Continue}    Continue
+${btssinnginFB}    เข้าสู่ระบบ
+${txtWelcomeFB}    เข้าสู่ระบบบัญชี Facebook ของคุณเพื่อเชื่อมต่อกับ dtac
+${btnconnectedFB}    ดำเนินการต่อ
